@@ -1,0 +1,131 @@
+body{
+	background-color: #f3f3f3;
+    font: 12px/1.5 arial,Helvetica Neue,tahoma,"Hiragino Sans GB",Microsoft YaHei,\5b8b\4f53;
+}
+}
+
+/*content-top*/
+div{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+div.content-top{
+	margin-top: 125px;
+}
+ .post_header {
+    padding-bottom: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ .post_header h1 {
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+}
+ .post_header .view_whole {
+     font-size: 15px; 
+    padding-left: 20px;
+}
+ .post_header .post_btn {
+    color: #fff;
+    padding: 4px 13px;
+    background-color: #ff7d00;
+    border-radius: 3px;
+}
+.btn-primary{
+	margin-left: 15px;
+}
+.fr {
+    float: right;
+}
+.forum_about .left .post_header .post_btn em {
+    padding-left: 6px;
+}
+em{
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 8px;
+}
+a {
+    color: #333;
+    outline: none;
+    text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a.active{
+	text-decoration: none;
+	font-size: 15px;
+	color: #5D5353;
+}
+a.active:hover{
+	color: #2196F3;
+}
+.panel{
+	margin-bottom: 0px;
+	border:0;
+}
+.panel-body{
+	height: 100%;
+	border-bottom: 1px dotted #999;
+}
+div.panel-body p{
+	padding-bottom: 10px;
+}
+.panel-default>.panel-heading{
+	background-color: white;
+}
+
+span.glyphicon.glyphicon-user{
+	padding-right: 5px;
+}
+span.glyphicon.glyphicon-time{
+padding-right: 5px;
+}
+p{
+	margin: 0px;
+}
+.fenye{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.fr {
+    float: right;
+}
+ .pinfo p {
+    display: inline;
+    margin-right: 30px;
+}
+
+@media (min-width: 768px){
+.container .row{
+    width: 100%;
+}
+
+.navbar-form.navbar-right:last-child {
+    padding-right: 50px;
+}
+}
+
+
+@media (min-width: 992px){
+.container .row{
+    width: 100%; 
+}
+.forum_about .left {
+    margin-left: 30px;
+}
+.forum_about .left {
+    width: 745px;
+    margin-right: 55px;
+    padding-top: 40px;
+}
+.fl {
+    float: left;
+}
+}

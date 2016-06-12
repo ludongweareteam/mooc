@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+ <title>我的学习计划</title>
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/study-center.css">
+    <link rel="stylesheet" type="text/css" href="../css/fullcalendar.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.css"> 
+<style type="text/css">
+#calendar{width:960px; margin:20px auto 10px auto}
+.fancy{width:450px; height:auto}
+.fancy h3{height:30px; line-height:30px; border-bottom:1px solid #d3d3d3; font-size:14px}
+.fancy form{padding:10px}
+.fancy p{height:28px; line-height:28px; padding:4px; color:#999}
+.input{height:20px; line-height:20px; padding:2px; border:1px solid #d3d3d3; width:100px}
+.btn{-webkit-border-radius: 3px;-moz-border-radius:3px;padding:5px 12px; cursor:pointer}
+.btn_ok{background: #360;border: 1px solid #390;color:#fff}
+.btn_cancel{background:#f0f0f0;border: 1px solid #d3d3d3; color:#666 }
+.btn_del{background:#f90;border: 1px solid #f80; color:#fff }
+.sub_btn{height:32px; line-height:32px; padding-top:6px; border-top:1px solid #f0f0f0; text-align:right; position:relative}
+.sub_btn .del{position:absolute; left:2px}
+</style>
+
+</head>
+
+<body>
+ <body>
+      <div class="navbar-wrapper">
+  <div class="container">
+    <div class="navbar navbar-inverse navbar-static-top">
+      
+        <div class="navbar-header">
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+       <a class="navbar-brand" href="#">
+        <img alt="Brand" src="../images/logo.png"width="150px">
+      </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../meeting/index.jsp" target="_top">首页</a></li>
+            <li class="active"><a href="../meeting/course.html
+            " target="_top">课程</a></li>
+            <li class="active"><a href="#" target="_top">直播</a></li>
+            <li class="active">
+              <a href="../meeting/community.html" target="_top">社区</a>
+            </li>
+             <li class="active">
+              <a href="#" target="_top">学习中心</a>
+            </li>
+             <li class="active">
+              <a href="#" class="btn-login" target="_blank">登录/注册</a>
+            </li>
+          </ul>
+         
+        </div>
+
+    </div>
+  </div><!-- /container -->
+</div><!-- /navbar wrapper -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+                    <li class="active">
+                        <a href="home">  <i class="glyphicon glyphicon-book"></i>
+                            我的课程    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myshoucang" class="nav-header collapsed" data-toggle="collapse"> <i class="glyphicon glyphicon-star"></i>
+                            我的收藏
+                      <span class="badge">4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#mystudyplan" class="nav-header collapsed" data-toggle="collapse">            
+                        <i class="glyphicon glyphicon-list-alt"></i>
+                            我的学习计划    
+                        </a>
+                    
+                    </li>
+
+                    <li>
+                        <a href="#mydriction" class="nav-header collapsed" data-toggle="collapse">
+                       <i class="glyphicon glyphicon-ok"></i>我的题库
+                        </a>
+                   
+                    </li>
+
+                    <li>
+                        <a href="#mynote" class="nav-header collapsed" data-toggle="collapse">               
+                        <i class="glyphicon glyphicon-pencil"></i>
+                            我的笔记
+                           
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#discuess"><i class="glyphicon glyphicon-comment"></i>
+                            讨论
+                            <span class="badge">4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#focus"><i class="glyphicon glyphicon-envelope"></i>
+                            关注/粉丝
+                            <span class="badge">4</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+    <div id='calendar' class="col-md-10"></div>
+    
+    <footer class="panel-footer">
+  <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>新闻</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="tag" class="col-sm-4">
+          <span>关于我们</span><br>
+          <a href="#"class="tag-a">服务条款</a><br>
+          <a href="#"class="tag-a">诚聘英才</a><br>
+          <a href="#"class="tag-a">隐私保护</a><br>
+          
+          <hr class="visible-xs">
+        </section>
+        <section id="tag" class="col-sm-4">
+        <span>联系我们</span><br>
+          <p><img src="../images/wechat.jpg"width=100px height="100px"></img><br>微信</p>
+          联系我们：222-22222
+        </section>
+      </div>
+      <div class="text-center">&copy; Power by WeAreTeam 2016
+      <p class="pull-right"><a href="#">返回顶部</a></p>
+      </div>
+    </div>
+    
+  </footer>
+<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
+<script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+    <script src="../js/jquery-ui-1.10.2.custom.min.js"></script> 
+    <script src="../js/fullcalendar.min.js"></script> 
+    <!--<script src="../js/jquery.min.js"></script>-->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src='../js/jquery.fancybox-1.3.1.pack.js'></script>
+<script type="text/javascript">
+$(function() {
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay'
+		},
+		editable: true,
+		dragOpacity: {
+			agenda: .5,
+			'':.6
+		},
+		eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
+			$.post("do.php?action=drag",{id:event.id,daydiff:dayDelta,minudiff:minuteDelta,allday:allDay},function(msg){
+				if(msg!=1){
+					alert(msg);
+					revertFunc();
+				}
+			});
+    	},
+		
+		 eventResize: function(event,dayDelta,minuteDelta,revertFunc) {
+			$.post("do.php?action=resize",{id:event.id,daydiff:dayDelta,minudiff:minuteDelta},function(msg){
+				if(msg!=1){
+					alert(msg);
+					revertFunc();
+				}
+			});
+    	},
+		
+		
+		selectable: true,
+		select: function( startDate, endDate, allDay, jsEvent, view ){
+			var start =$.fullCalendar.formatDate(startDate,'yyyy-MM-dd');
+			var end =$.fullCalendar.formatDate(endDate,'yyyy-MM-dd');
+			$.fancybox({
+				'type':'ajax',
+				'href':'event.php?action=add&date='+start+'&end='+end
+			});
+		},
+		
+		
+		
+		
+		events: 'json.php',
+		dayClick: function(date, allDay, jsEvent, view) {
+			var selDate =$.fullCalendar.formatDate(date,'yyyy-MM-dd');
+			$.fancybox({
+				'type':'ajax',
+				'href':'event.php?action=add&date='+selDate
+			});
+    	},
+		eventClick: function(calEvent, jsEvent, view) {
+			$.fancybox({
+				'type':'ajax',
+				'href':'event.php?action=edit&id='+calEvent.id
+			});
+		}
+	});
+	
+});
+</script>
+<!--<p id="stat"><script type="text/javascript" src="/js/tongji.js"></script></p>-->
+</body>
+</html>
