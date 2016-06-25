@@ -1,0 +1,26 @@
+@media (min-width: 768px){
+.container .row{
+  width: 100%;
+
+}
+
+.navbar-form.navbar-right:last-child {
+    padding-right: 50px;
+}
+#calendar div{
+
+	width: 50%
+}
+
+}
+
+
+@media (min-width: 992px){
+.container .row{
+    width: 90%; 
+}
+    #calendar div{
+
+	width: 50%
+}
+}
