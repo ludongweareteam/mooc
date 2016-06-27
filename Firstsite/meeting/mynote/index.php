@@ -1,22 +1,44 @@
-<!DOCTYPE html>
+<?php
+include_once('connect.php');
+include_once('function.php');
+
+$notes = '';  
+$left='';  
+$top='';  
+$zindex='';  
+$query = mysql_query("select * from notes order by id desc limit 0, 50");
+while($row=mysql_fetch_array($query)){
+	list($left,$top,$zindex) = explode('|',$row['xyz']); 
+	$time = strtotime($row['addtime']);
+	$notes.= '
+	<div class="note '.$row['color'].'" style="left:'.$left.'px;top:'.$top.'px;z-index:'.$zindex.'">
+		<span class="data">'.$row['id'].'.</span>'.htmlspecialchars($row['content']).'
+		<p class="user">——'.htmlspecialchars($row['name']).'<br/>('.tranTime($time).')</p>
+	</div>';
+}
+?>
+<!doctype html>
 <html>
-  <head>
-    <title>我的学习计划</title>
-	
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/study-center.css">
-    <link rel="stylesheet" type="text/css" href="../css/fullcalendar.css"> 
-    <link rel="stylesheet" type="text/css" href="../css/fancybox.css"> 
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-   
-  </head>
-  
-  <body>
-      <div class="navbar-wrapper">
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>遇见课堂-学习中心-我的笔记</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/study-center.css">
+		<!--<link rel="stylesheet" type="text/css" href="../css/main.css" />-->
+		<link rel="stylesheet" type="text/css" href="../css/note.css" />
+		<link rel="stylesheet" type="text/css" href="../css/fancybox33.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+       <script src="//cdn.bootcss.com/jquery.form/3.51/jquery.form.js"></script>
+       <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/jquery.fancybox-1.3.1.pack.js"></script>
+		<script type="text/javascript" src="../js/global.js"></script>
+</head>
+
+<body>
+  <div class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-static-top">
       
@@ -69,14 +91,14 @@
                         </a>
                     </li>
                     <li class="active">
-                        <a href="#mystudyplan" class="nav-header collapsed" data-toggle="collapse">            
+                        <a href="../study-center-child/mystudyplan.html" class="nav-header collapsed" data-toggle="collapse">            
                         <i class="glyphicon glyphicon-list-alt"></i>
                             我的学习计划    
                         </a>
                     
                     </li>
 
-                    <li>
+                    <li >
                         <a href="#mydriction" class="nav-header collapsed" data-toggle="collapse">
                        <i class="glyphicon glyphicon-ok"></i>我的题库
                         </a>
@@ -84,7 +106,7 @@
                     </li>
 
                     <li>
-                        <a href="/mynote/index.php" class="nav-header collapsed" data-toggle="collapse">               
+                        <a href="#mynote" class="nav-header collapsed" data-toggle="collapse">               
                         <i class="glyphicon glyphicon-pencil"></i>
                             我的笔记
                            
@@ -108,9 +130,20 @@
                 </ul>
             </div>
 
-    <div id='calendar' class="col-md-10"></div>
-    
-    <footer class="panel-footer">
+       <div id="main" class="col-md-10">
+      <div id="add"><a href="add_note.html" id="fancy"><button class="btn btn-primary btn-xs" type="button">
+                      新增笔记
+                </button></a></div>
+      <div id="edit"><a href="edit-note.html" id="fancy1"><button class="btn btn-primary btn-xs" type="button">
+                      修改笔记
+                </button></a></div>
+     <div class="demo">
+       <?php echo $notes;?>
+     </div>
+   </div>
+
+
+ <footer class="panel-footer">
   <div class="container">
       <div class="row">
         <section id="hours" class="col-sm-4">
@@ -140,45 +173,9 @@
     </div>
     
   </footer>
-
+  <script type="text/javascript">
     
-    <script src="../js/jquery.min.js"></script> 
-    <script src="../js/jquery-ui-1.10.2.custom.min.js"></script> 
-    <script src="../js/fullcalendar.min.js"></script> 
-    <!--<script src="../js/jquery.min.js"></script>-->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src='../js/jquery.fancybox-1.3.1.pack.js'></script>
-     <script>
-     $(function() {
-      $('#calendar').fullCalendar({
-         events: 'json.php',
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay'
-        },
-       
-   dayClick: function(date, allDay, jsEvent, view) {
-      var selDate =$.fullCalendar.formatDate(date,'yyyy-MM-dd');//格式化日期
-      $.fancybox({ //调用fancybox弹出层
-        'type':'ajax',
-        'href':'newenvent.php?action=add&date='+selDate
-        //'content':'newenvent.php'
-       
-      });
-      },
-    eventClick: function(calEvent, jsEvent, view) {
-      $.fancybox({ //调用fancybox弹出层
-        'type':'ajax',
-        'href':'newenvent.php?action=edit&id='+calEvent.id
-        //'content':'newenvent.php'
-       
-      });
-      }
-    //var $= jQuery.noConflict();
-  });
-$("/mynote/index.php"), listHeight;$($.parseHTML(this.linkTemplate, document, true)).appendTo("/mynote/index.php");
-});
-</script> 
-  </body>
+  </script>
+
+</body>
 </html>

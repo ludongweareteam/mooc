@@ -2,7 +2,10 @@
         #main-nav {
             margin-left: 1px;
         }
+      li{
 
+       list-style: none;
+      }
             #main-nav.nav-tabs.nav-stacked > li > a {
                 padding: 10px 8px;
                 font-size: 12px;

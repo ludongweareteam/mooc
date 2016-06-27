@@ -59,7 +59,7 @@
             <div class="col-md-2">
                 <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
                     <li class="active">
-                        <a href="home">  <i class="glyphicon glyphicon-book"></i>
+                        <a href="#">  <i class="glyphicon glyphicon-book"></i>
                             我的课程 		
                         </a>
                     </li>
@@ -85,7 +85,7 @@
                     </li>
 
                     <li>
-                        <a href="#mynote" class="nav-header collapsed" data-toggle="collapse">               
+                        <a href="meeting/mynote/index.php" class="nav-header collapsed" data-toggle="collapse">               
                         <i class="glyphicon glyphicon-pencil"></i>
                             我的笔记
                            
@@ -110,15 +110,15 @@
             </div>
            <div class="col-md-10">
            <div>
-              <ul class="nav nav-tabs" id="wodekecheng">
-				  <li role="presentation" class="active"><a href="#zhangzai"data-toggle="tab" onclick='showPage("zhengzai","study-center.html")'>正在</a></li>
-				  <li role="presentation"><a href="#weikaishi" data-toggle="tab" onclick='showPage("weikaishi","notsart.jsp")'>未开始</a></li>
-				  <li role="presentation"><a href="#yijieshu"data-toggle="tab" onclick='showPage("yikaishi","finished.jsp")'>已结束</a></li>
+              <ul class="nav nav-tabs" id="wodekecheng" >
+				  <li role="presentation" class="active" onclick="showcourse('zhengzai')" ><a href="#zhengzai"data-toggle="tab">正在</a></li>
+				  <li role="presentation" onclick="showcourse('weikaishi' )"><a href="#weikaishi" data-toggle="tab" >未开始</a></li>
+				  <li role="presentation" onclick="showcourse('yijieshu')"><a href="#yijieshu"data-toggle="tab" >已结束</a></li>
 				</ul>
 			</div>
 			<div class="tab-content">
 				<div class="col-sm-6 col-md-4" id="zhengzai">
-			        <a class="#" target="_blank">
+			        <a class="#" target="_top">
 			         <div class="thumbnail">
 			          <img class="kecheng"src="images/50.jpg"width="230"height="140" alt="...">
 			            <div class="progress">
@@ -149,7 +149,7 @@
 			          </a>
                  </div>
                  
-                 <div class="col-sm-6 col-md-4" id="yijieshu">
+          <div class="col-sm-6 col-md-4" id="yijieshu">
 			        <a class="#" target="_blank">
 			         <div class="thumbnail">
 			          <img class="kecheng"src="images/50.jpg"width="230"height="140" alt="...">
@@ -219,8 +219,16 @@
   $(this).tab('show');
   })
 })
- 
-
+function showcourse(pid){
+  var tabs=["zhengzai","weikaishi","yijieshu"];
+  for(var i=0;i<3;i++){
+   if(tabs[i]==pid){
+    document.getElementById(tabs[i]).style.display="block";
+  }else{
+    document.getElementById(tabs[i]).style.display="none";
+  }
+  }
+ }
   </script>
 </body>
 </html>
