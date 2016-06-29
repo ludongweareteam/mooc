@@ -1,0 +1,562 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui"> 
+	<title>遇见课堂-社区</title>
+  <meta name="author" content="INXEDU(http://www.inxedu.com)"> 
+<meta name="keywords" content=""> 
+<meta name="description" content=""> 
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+<meta content="telephone=no" name="format-detection"> 
+<link rel="shortcut icon" href="http://demo1.inxedu.com/favicon.ico" type="image/x-icon"> 
+<link rel="stylesheet" type="text/css" href="./css/reset.css"> 
+<link rel="stylesheet" type="text/css" href="./css/theme.css"> 
+<link rel="stylesheet" type="text/css" href="./css/global.css"> 
+<link rel="stylesheet" type="text/css" href="./css/web.css"> 
+<link href="./css/mw_320_768.css" rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 768px)"> 
+<!--[if lt IE 9]><script src="http://demo1.inxedu.com/static/common/html5.js"></script><![endif]--> 
+<script charset="utf-8" src="./js/lxb.js"></script>
+<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="./js/webutils.js"></script> 
+<script type="text/javascript" src="./js/header.js"></script> 
+<script type="text/javascript" src="./js/common.js"></script> 
+<script>var baselocation = "http://demo1.inxedu.com";var keuploadSimpleUrl='http://demo1.inxedu.com/image/keupload?';var uploadServerUrl='http://demo1.inxedu.com';var uploadSimpleUrl="http://demo1.inxedu.com/image/gok4?";</script> 
+<script src="./js/bfcloud.js"></script>
+<script type="text/javascript" src="./js/cloudsdk.js"></script>
+<script src="./js/share.js"></script>
+<link rel="stylesheet" href="./css/share_style0_16.css">
+<style type="text/css">
+#spxc_2345,#spxc_2345 *,#spxc_2345 :after,#spxc_2345 :before{box-sizing: initial !important;}
+#spxc_2345{position:fixed;left:0;top:10px;z-index:2147483647; width:124px;height:26px;font-size: 14px;}
+#spxc_2345 a{position:absolute;top:0;line-height:24px;text-align:center;}
+#daspxc{left:0;width:99px;height: 24px;border-radius:4px 0 0 0;border:1px solid #c2c7cc;font-size:14px;color:#333 !important;font-family:'Microsoft YaHei';text-decoration:none;background-color:#f2f2f2;}
+#daspxc i,a#daspxc span,#gbspxc{background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABgCAYAAAF9H/KFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1NDE0YjcyZS01OGY3LWQ3NDEtYjY3NC1hZDg5ZWNiZTMwZDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjUzMDJCNEU1QzIwMTFFNTg1QjRDMDI5MzhCM0ZBNjUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjUzMDJCNEQ1QzIwMTFFNTg1QjRDMDI5MzhCM0ZBNjUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU0MTRiNzJlLTU4ZjctZDc0MS1iNjc0LWFkODllY2JlMzBkNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NDE0YjcyZS01OGY3LWQ3NDEtYjY3NC1hZDg5ZWNiZTMwZDYiLz4gPC9y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') no-repeat;}
+a#daspxc:hover{background-color:#fafafa;color: #333 !important;}
+#daspxc i{position: absolute;top: -1px;left: 0;height: 26px;width: 4px;background-position: -1px -16px}
+a#daspxc:hover i{background-position: -1px -43px;}
+a#daspxc:active i{background-position: -1px -70px;}
+a#daspxc span{display:inline-block;width:14px;height:14px;background-position:-1px -2px;margin-right:4px;overflow:hidden;vertical-align: middle;}
+a#daspxc:hover span{background-position:-16px -2px;}
+a#daspxc:active{background-color:#f2f2f2;}
+a#daspxc:active span{background-position:-1px -2px;}
+#gbspxc{right:0;width:23px;height: 26px;background-position: -6px -16px;}
+a#gbspxc:hover{background-position: -6px -43px;}
+a#gbspxc:active{background-position: -6px -70px;}
+</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/styles.css" rel="stylesheet">
+	<link rel="stylesheet"  href="./css/community.css">
+</head>
+<body>
+
+ <div class="navbar-wrapper">
+  <div class="container">
+    <div class="navbar navbar-inverse navbar-static-top">
+      
+        <div class="navbar-header">
+	    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </a>
+       <a class="navbar-brand" href="#">
+        <img alt="Brand" src="images/logo.png"width="150px">
+      </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../meeting/index.html" target="_blank">首页</a></li>
+            <li class="active"><a href="../meeting/course.html
+            " target="_top">课程</a></li>
+            <li class="active"><a href="#" target="_top">直播</a></li>
+            <li class="active">
+              <a href="../meeting/community.html" target="_top">社区</a>
+            </li>
+             <li class="active">
+              <a href="../meeting/study-center.html" target="_top">学习中心</a>
+            </li>
+             <li class="active">
+              <a href="#" class="btn-login" target="_top">登录/注册</a>
+            </li>
+          </ul>
+           <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+<!-- 内容 -->
+
+
+
+	<div id="aCoursesList" class="bg-fa of">
+   <section class="container1"> 
+   <section class="path-wrap txtOf hLh30"> 
+    <a href="http://demo1.inxedu.com/" title="" class="c-999 fsize14">首页</a> \ <a href="http://demo1.inxedu.com/front/showcoulist" title="" class="c-999 fsize14">课程列表</a> \ <span class="c-333 fsie14">大学计算机基础</span> </section> 
+    <div> 
+    <article class="c-v-pic-wrap" style="height: 357px;"> 
+    
+<video id="video" class="video-js" controls preload="auto" width="640px" height="360px"
+       poster="VIDEO.jpg" data-setup="{}" >
+
+    <source src="movie/M1.mp4" type='video/mp4' >
+    <source src="VIDEO.webm" type='video/webm'>
+    
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+
+
+
+<div style="position:absolute;left:640px;top:0px;">
+   <aside class="c-attr-wrap"> 
+  <section class="ml20 mr15"> 
+  <h2 class="hLh30 txtOf mt15"> <span class="c-fff fsize24">大学计算机基础</span> </h2> 
+  <section class="c-attr-mt c-attr-undis"> <span class="c-fff fsize14">主讲： 李雷&nbsp;&nbsp;&nbsp; 张扬&nbsp;&nbsp;&nbsp; </span> </section> 
+ <section class="c-attr-mt"> <a href="" id="cou-shopcar" title="立即观看" onclick="if(isLogin()){ window.location.href=&#39;/uc/play/10&#39;} else{lrFun();} " class="comm-btn c-btn-3">立即观看</a> </section> 
+
+<div style="position:absolute;right:-100px;top:0px;">
+<aside class="thr-attr-box"> <ol class="thr-attr-ol clearfix">
+  <li><p>&nbsp;</p> <aside>
+   <span class="c-fff f-fM">课时数</span><br><h6 class="c-fff f-fM mt10">5</h6> </aside></li>
+  <li><p>&nbsp;</p> 
+  <aside><span class="c-fff f-fM">浏览数</span><br><h6 class="c-fff f-fM mt10">332</h6> </aside></li> 
+  </ol>
+  </aside> 
+
+ </aside> 
+</div>
+
+ <section class="c-attr-mt of ml5"> <span class="ml20 vam"><em class="icon18 scIcon"></em><a class="c-fff vam" title="收藏" onclick="favorites(10,this)" href="javascript:void(0)">收藏</a></span> <section class="kcShare pr fl hand vam"> 
+<!--  <tt> <em class="icon18 shareIcon"></em>
+ <span class="vam c-fff f-fM">分享</span> </tt> 
+ <div id="bdshare" class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1466781273768">
+ <a href=" " class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+ <a href=" " class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+ <a href=" " class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+ <a href=" " class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+ <a href=" " class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+ <a href=" " class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></div>  -->
+ <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> </section> </section> 
+</section>
+
+
+  
+</div>
+
+               
+
+
+
+
+
+
+
+
+  
+  <div class="clear"></div> 
+  </div> 
+  <div class="mt20 c-infor-box"> 
+  <article class="fl col-7"> 
+  <section class="mr30"> 
+  <div class="i-box"> 
+  <div class="clearfix c-infor-tabTitle c-tab-title"> 
+  <section id="c-i-tabTitle" class=" fl"> <a name="c-i" class="current" title="课程详情" href="javascript: void(0)">课程详情</a> 
+  <a name="c-g" title="课程大纲" href="javascript: void(0)">课程大纲</a> 
+  <a name="c-c" title="课程评论" href="javascript: void(0)">课程评论</a> 
+  <a name="c-c" title="社区信息" href=" ">社区信息</a> </section> 
+  <section class="fr m-check-box"> 
+  <a href="javascript:;">
+  <span class="fsize16 vam">手机查看</span><img width="18" height="18" class="vam ml5" src="./images/weixin.jpg"><em class="icon14 ml5 phone-check"> </em></a> 
+  <div id="output" class="m-ewm"><canvas width="120" height="120"></canvas></div> </section> 
+  </div> 
+  <article class="ml10 mr10 pt20"> 
+  <div> <h6 class="c-i-content c-infor-title"> <span>课程介绍</span> </h6> 
+  <div class="course-txt-body-wrap"> <section class="course-txt-body" style="height: 88px;"> <p>
+《大学计算机基础》是一门本科公共基础必修课程，将从三个方面培养学生的计算机基础能力：理解计算机系统、使用计算机和计算思维。通过本课程的学习，要求学生不仅要掌握计算机科学与技术的基础知识，而且应初步具备利用计算机分析问题和解决问题的意识与能力，使得学员今后能够更好地在各自专业领域中应用计算机和计算思维解决实际问题。
+<br> <br> <br> 小提醒<br> <br> &nbsp;&nbsp;&nbsp; 教程将专注于Python基础，语法基于Python 2.7 (我会提醒Python 3.x中有变化的地方，以方便读者适应3.X的情况)。测试环境为Linux。标准库的一些包不适用于Windows平台。如果文中的程序无法在你的平台上运行，欢迎讨论。<br> &nbsp;&nbsp;&nbsp; 我将专注于Python的主干，以便读者能以最快时间对Python形成概念。<br> &nbsp;&nbsp;&nbsp; Linux命令行将以$开始，比如 $ls, $python<br> &nbsp;&nbsp;&nbsp; Python命令行将以&gt;&gt;&gt;开始，比如 &gt;&gt;&gt;print 'Hello World!'<br> &nbsp;&nbsp;&nbsp; 注释会以#开始<br> <br> <br> 建议<br> <br> &nbsp;&nbsp;&nbsp; 将教程中的命令敲到Python中看看效果。<br> &nbsp;&nbsp;&nbsp; 看过教程之后，可以进行一些练习。<br> &nbsp;&nbsp;&nbsp; 参与文章评论区的讨论，可以更好的积累经验。<br> <br> <br></p> </section> 
+  <section class="ctb-btn"><a href="" class="comm-btn c-btn-6" title="查看更多" style="display: none;">查看更多∨</a></section> </div> 
+  </div> 
+  <div class="mt50"> <h6 class="c-g-content c-infor-title"> <span>课程大纲</span> </h6> 
+  <section class="mt20"> 
+  <div class="lh-menu-wrap" id="courseKpointMenu">
+ <menu id="lh-menu" class="lh-menu">
+    <ul>
+      <!-- 视频 -->
+          <li class="lh-menu-stair">
+            <ul class="lh-menu-ol no-parent-node current-2">
+              <li class="lh-menu-second">
+                <a title="" onclick="getPlayerHtml(53,this,&#39;第一节&#39;)" class="l-m-stitle" href="javascript:void(0)">
+                  <span class="fr">
+                    <tt href="" class="free-icon vam">免费试听</tt>
+                    <em class="lh-p-icon icon14 ml5">&nbsp;</em>
+                      </span>
+                  <em class="lh-menu-i-2 mr5">&nbsp;</em>第一节</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+  </menu>
+  
+<!-- /无数据提示 开始-->
+
+<input type="hidden" id="playFromType" value="1">
+<input type="hidden" id="courseId" value="10">
+<!-- /无数据提示 结束-->
+<script type="text/javascript" src="./js/course-kpoint-list.js"></script>
+</div> 
+</section> 
+
+
+
+
+
+
+<div class="mt50 commentHtml">
+<div>
+  <h6 class="c-c-content c-infor-title" id="i-art-comment">
+    <span class="commentTitle">课程评论</span>
+  </h6>
+  <section class="lh-bj-list pr mt20 replyhtml">
+    <ul>
+      <li class="unBr">
+        <aside class="noter-pic">
+          <img width="50" height="50" class="picImg" src="./images/avatar-boy.gif">
+          </aside>
+        <div class="of">
+          <section class="n-reply-wrap">
+            <fieldset>
+              <textarea name="" placeholder="输入您要评论的文字" id="commentContent"></textarea>
+            </fieldset>
+            <p class="of mt5 tar pl10 pr10">
+              <span class="fl "><tt class="c-red commentContentmeg" style="display: none;"></tt></span>
+              <a href="javascript:addComment();" title="回复" class="lh-reply-btn">回复</a>
+            </p>
+          </section>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="">
+      <section class="question-list lh-bj-list pr">
+        <ul class="pr10">
+          <li>
+              <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" src="./images/1466409463110.jpg">
+                </aside>
+              <div class="of">
+                <span class="fl"> 
+                <font class="fsize12 c-blue"> 
+                 遇见课堂</font>
+                <font class="fsize12 c-999 ml5">评论：</font></span>
+              </div>
+              <div class="noter-txt mt5">
+                <p>9件事把你从消极情绪中解救出来</p>
+              </div>
+              <div class="of mt5">
+                <span class="fr"><font class="fsize12 c-999 ml5">2016/03/26 11:25</font></span> <span class="fl"> <a class="noter-dy vam" title="回复" href="javascript: void(0)" onclick="queryCommentReply(&#39;10&#39;)">
+                    <em class="icon18">&nbsp;</em>(<span class="replyCount10">0</span>)
+                  </a> <tt title="赞一下" class="noter-zan vam ml10" onclick="addPraise(&#39;10&#39;,4)">
+                    <em class="icon18">&nbsp;</em>(<span class="addPraise10_4 praiseCount">0</span>)
+                  </tt>
+                </span>
+              </div>
+              <div class="n-reply">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" class="commentReplyMsgContent10"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl"><tt class="c-red commentReplyMsg10"></tt></span>
+                    <a onclick="addCommentReply(&#39;10&#39;)" class="lh-reply-btn" title="回复" href="javascript: void(0)">回复</a>
+                  </p>
+                </section>
+                <div class="mt10 pl10 pr10 pb10 commentReply10"></div>
+              </div> <!-- /回复盒子 -->
+            </li>
+          <li>
+              <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" src="./images/1441527777887.jpg">
+                </aside>
+              <div class="of">
+                <span class="fl"> 
+                <font class="fsize12 c-blue"> 
+                  goddess</font>
+                <font class="fsize12 c-999 ml5">评论：</font></span>
+              </div>
+              <div class="noter-txt mt5">
+                <p>是一种面向对象、解释型计算机程序设计语言，由Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。</p>
+              </div>
+              <div class="of mt5">
+                <span class="fr"><font class="fsize12 c-999 ml5">2015/11/04 11:59</font></span> <span class="fl"> <a class="noter-dy vam" title="回复" href="javascript: void(0)" onclick="queryCommentReply(&#39;7&#39;)">
+                    <em class="icon18">&nbsp;</em>(<span class="replyCount7">0</span>)
+                  </a> <tt title="赞一下" class="noter-zan vam ml10" onclick="addPraise(&#39;7&#39;,4)">
+                    <em class="icon18">&nbsp;</em>(<span class="addPraise7_4 praiseCount">0</span>)
+                  </tt>
+                </span>
+              </div>
+              <div class="n-reply">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" class="commentReplyMsgContent7"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl"><tt class="c-red commentReplyMsg7"></tt></span>
+                    <a onclick="addCommentReply(&#39;7&#39;)" class="lh-reply-btn" title="回复" href="javascript: void(0)">回复</a>
+                  </p>
+                </section>
+                <div class="mt10 pl10 pr10 pb10 commentReply7"></div>
+              </div> <!-- /回复盒子 -->
+            </li>
+          <li>
+
+
+ <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" src="./images/1441527777887.jpg">
+                </aside>
+              <div class="of">
+                <span class="fl"> 
+                <font class="fsize12 c-blue"> 
+                  goddess</font>
+                <font class="fsize12 c-999 ml5">评论：</font></span>
+              </div>
+              <div class="noter-txt mt5">
+                <p>是一种面向对象、解释型计算机程序设计语言，由Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。</p>
+              </div>
+              <div class="of mt5">
+                <span class="fr"><font class="fsize12 c-999 ml5">2015/11/04 11:59</font></span> <span class="fl"> <a class="noter-dy vam" title="回复" href="javascript: void(0)" onclick="queryCommentReply(&#39;7&#39;)">
+                    <em class="icon18">&nbsp;</em>(<span class="replyCount7">0</span>)
+                  </a> <tt title="赞一下" class="noter-zan vam ml10" onclick="addPraise(&#39;7&#39;,4)">
+                    <em class="icon18">&nbsp;</em>(<span class="addPraise7_4 praiseCount">0</span>)
+                  </tt>
+                </span>
+              </div>
+              <div class="n-reply">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" class="commentReplyMsgContent7"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl"><tt class="c-red commentReplyMsg7"></tt></span>
+                    <a onclick="addCommentReply(&#39;7&#39;)" class="lh-reply-btn" title="回复" href="javascript: void(0)">回复</a>
+                  </p>
+                </section>
+                <div class="mt10 pl10 pr10 pb10 commentReply7"></div>
+              </div> <!-- /回复盒子 -->
+            </li>
+          <li>
+
+
+
+              <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" src="./images/1441527777887.jpg">
+                </aside>
+              <div class="of">
+                <span class="fl"> 
+                <font class="fsize12 c-blue"> 
+                  goddess</font>
+                <font class="fsize12 c-999 ml5">评论：</font></span>
+              </div>
+              <div class="noter-txt mt5">
+                <p>收藏了</p>
+              </div>
+              <div class="of mt5">
+                <span class="fr"><font class="fsize12 c-999 ml5">2015/11/04 10:32</font></span> <span class="fl"> <a class="noter-dy vam" title="回复" href="javascript: void(0)" onclick="queryCommentReply(&#39;2&#39;)">
+                    <em class="icon18">&nbsp;</em>(<span class="replyCount2">0</span>)
+                  </a> <tt title="赞一下" class="noter-zan vam ml10" onclick="addPraise(&#39;2&#39;,4)">
+                    <em class="icon18">&nbsp;</em>(<span class="addPraise2_4 praiseCount">0</span>)
+                  </tt>
+                </span>
+              </div>
+              <div class="n-reply">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" class="commentReplyMsgContent2"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl"><tt class="c-red commentReplyMsg2"></tt></span>
+                    <a onclick="addCommentReply(&#39;2&#39;)" class="lh-reply-btn" title="回复" href="javascript: void(0)">回复</a>
+                  </p>
+                </section>
+                <div class="mt10 pl10 pr10 pb10 commentReply2"></div>
+              </div> <!-- /回复盒子 -->
+            </li>
+          <li>
+              <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" src="./images/1441527777887.jpg">
+                </aside>
+              <div class="of">
+                <span class="fl"> 
+                <font class="fsize12 c-blue"> 
+                  goddess</font>
+                <font class="fsize12 c-999 ml5">评论：</font></span>
+              </div>
+              <div class="noter-txt mt5">
+                <p>讲得很详细</p>
+              </div>
+              <div class="of mt5">
+                <span class="fr"><font class="fsize12 c-999 ml5">2015/11/04 10:32</font></span> <span class="fl"> <a class="noter-dy vam" title="回复" href="javascript: void(0)" onclick="queryCommentReply(&#39;1&#39;)">
+                    <em class="icon18">&nbsp;</em>(<span class="replyCount1">0</span>)
+                  </a> <tt title="赞一下" class="noter-zan vam ml10" onclick="addPraise(&#39;1&#39;,4)">
+                    <em class="icon18">&nbsp;</em>(<span class="addPraise1_4 praiseCount">0</span>)
+                  </tt>
+                </span>
+              </div>
+              <div class="n-reply">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" class="commentReplyMsgContent1"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl"><tt class="c-red commentReplyMsg1"></tt></span>
+                    <a onclick="addCommentReply(&#39;1&#39;)" class="lh-reply-btn" title="回复" href="javascript: void(0)">回复</a>
+                  </p>
+                </section>
+                <div class="mt10 pl10 pr10 pb10 commentReply1"></div>
+              </div> <!-- /回复盒子 -->
+            </li>
+          </ul>
+      </section>
+    </section>
+  <!-- 公共分页 开始 -->
+  <script type="text/javascript" src="./images/page.js"></script>
+<div class="paging">
+    <a href="javascript:goPageAjax(1);" title="">首</a>
+    <a id="backpage" class="undisable" href="javascript:void(0)" title="">&lt;</a>
+      <a href="javascript:void(0)" title="" class="current undisable">1</a><a id="nextpage" href="javascript:void(0)" title="" class="undisable">&gt;</a>
+      <a href="javascript:goPageAjax(1);" title="">末</a>
+    <div class="clear"></div>
+  </div>
+
+
+<script type="text/javascript">
+    var totalPageSize =1;
+    var currentPage =0<1 ? 1 :1;
+    var totalPage = 1;
+    showAjaxPageNumber();
+</script><!-- 公共分页 结束 -->
+</div>
+<script>
+  $(function() {
+    replyFun(); //回复展开
+  });
+  var totalResultSize = 4;
+  $(".totalResultComment").html(totalResultSize);
+  var order = "commentId";
+  var title = "评论";
+  if (type == 1) {
+    title = "文章评论（4条）"
+  }
+  if (type == 2) {
+    title = "课程评论"
+    if(order=='praiseCount'){
+      title = "精彩评论"
+      $(".replyhtml").hide();
+    }
+    
+  }
+  if (type == 3) {
+    title = "直播评论"
+    if(order=='praiseCount'){
+      title = "精彩评论"
+      $(".replyhtml").hide();
+    }
+
+  }
+  
+  $(".commentTitle").html(title);
+</script></div> </article> </div> </section> </article> 
+
+
+<aside class="fl col-3"> 
+<!-- 主讲讲师 -->
+<div class="i-box"><div> <section class="c-infor-tabTitle c-tab-title"> 
+<a title="" href="javascript:void(0)">主讲讲师</a></section> 
+<section class="stud-act-list"> 
+<ul style="height: auto;">
+<li> <div class="u-face"> 
+<a href=" "> 
+<img src="./images/1442297957332.jpg" width="50" height="50" alt=""> </a> </div> 
+<section class="hLh30 txtOf"> <a class="c-333 fsize16 fl" href=" ">李虹</a> </section> 
+<section class="hLh20 txtOf"> <span class="c-999">鲁东大学计算机科学与技术学院教师</span> </section> </li> </ul>
+<ul style="height: auto;"> 
+<li> <div class="u-face"> <a href=""> <img src="./images/1442298121626.jpg" width="50" height="50" alt=""> </a> </div> 
+<section class="hLh30 txtOf"> <a class="c-333 fsize16 fl" href=" ">张扬</a> </section> 
+<section class="hLh20 txtOf"> 
+<span class="c-999">毕业于鲁东大学，热爱教育事业，执教计算机10年有余</span> </section> 
+</li> </ul> </section> </div> 
+</div> 
+ 
+
+<div class="i-box mt20"> 
+<div> <section class="c-infor-tabTitle c-tab-title"> <a title="" href="javascript:void(0)">猜你想学</a> </section> 
+<section class="no-data-wrap"> 
+<em class="icon30 no-data-ico">&nbsp;</em> 
+<span class="c-666 fsize14 ml10 vam">没有相关数据，小编正在整理中...</span> 
+</section> 
+</div> 
+
+
+
+</div>
+</aside> 
+
+<div class="clear"></div>
+</div>
+</section>
+</div>
+
+<!-- 底部 -->
+
+ <!-- FOOTER -->
+  <footer class="panel-footer">
+  <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>新闻</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="tag" class="col-sm-4">
+          <span>关于我们</span><br>
+          <a href="#"class="tag-a">服务条款</a><br>
+          <a href="#"class="tag-a">诚聘英才</a><br>
+          <a href="#"class="tag-a">隐私保护</a><br>
+          
+          <hr class="visible-xs">
+        </section>
+        <section id="tag" class="col-sm-4">
+        <span>联系我们</span><br>
+          <p><img src="images/wechat.jpg"width=100px height="100px"></img><br>微信</p>
+          联系我们：222-22222<br>
+          关注我们，随时掌握全球最新好课
+        </section>
+      </div>
+      <div class="text-center">&copy; Power by WeAreTeam 2016
+      <p class="pull-right"><a href="#">返回顶部</a></p>
+      </div>
+    </div>
+    
+  </footer>
+</div>
+
+<!-- /.container -->
+	<!-- script references -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
