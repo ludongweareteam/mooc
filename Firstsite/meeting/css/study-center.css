@@ -50,7 +50,9 @@
 .container-fluid{
     margin-top: 150px;
 }
-
+..thumbnail{
+    margin-top: 20px;
+}
 .tab-content{
     margin-top: 25px;
 }

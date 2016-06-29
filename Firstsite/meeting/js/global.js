@@ -8,6 +8,7 @@ $(function(){
 	})
 	
 	make_draggable($('.note'));
+	
 	$("#fancy").fancybox({
 		'type':'ajax',
 		'modal':true,
@@ -43,7 +44,7 @@ $(function(){
 			'color': color
 		};
 		
-		$.post('posts.php',data,function(msg){
+		$.post('add.php',data,function(msg){
 			zIndex = zIndex++;
 			//alert(zIndex);
 			if(parseInt(msg)){

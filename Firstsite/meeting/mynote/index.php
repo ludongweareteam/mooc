@@ -90,7 +90,7 @@ while($row=mysql_fetch_array($query)){
                       <span class="badge">4</span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="../study-center-child/mystudyplan.html" class="nav-header collapsed" data-toggle="collapse">            
                         <i class="glyphicon glyphicon-list-alt"></i>
                             我的学习计划    
@@ -105,7 +105,7 @@ while($row=mysql_fetch_array($query)){
                    
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#mynote" class="nav-header collapsed" data-toggle="collapse">               
                         <i class="glyphicon glyphicon-pencil"></i>
                             我的笔记

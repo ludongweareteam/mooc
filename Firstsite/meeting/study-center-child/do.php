@@ -34,7 +34,7 @@ if($action=='add'){
 	$isallday = $isallday?1:0;
 	$query = mysql_query("insert into `calendar` (`title`,`starttime`,`endtime`,`allday`,`color`) values ('$events','$starttime','$endtime','$isallday','$color')");
 	if(mysql_insert_id()>0){
-		alert('成功！');
+		echo('成功！');
 	}else{
 		echo '写入失败！';
 	}

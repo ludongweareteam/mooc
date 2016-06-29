@@ -1,7 +1,7 @@
 <div class="popwin" style="width:380px">
 <h3 class="popup_title">新增笔记</h3>
 <div id="note_form">
-   <form id="add_form" action="#" method="post">
+   <form id="add_form" action="add.php" method="post">
       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="posttable">
         <tr>
            <td colspan="2">请输入内容： <span id="msg"></span></td>
@@ -14,12 +14,12 @@
            <td>背景色：</td>
         </tr>
         <tr>
-           <td><input type="text" class="input" name="user" id="user" /></td>
+           <td><input type="text" class="input" name="name" id="name" /></td>
            <td><ul id="color">
                  <li class="yellow cur"></li>
                  <li class="blue"></li>
                  <li class="green"></li>
-              </ul><input type="hidden" id="mycolor" value="yellow" /></td>
+              </ul><input type="hidden" id="mycolor" name="mycolor"value="yellow" /></td>
         </tr>
         <tr>
            <td height="36" colspan="2" align="center"><input type="submit" id="addbtn" class="btn" value="确 定" /> <input type="button" class="btn" value="取 消" id="cancel" onclick="$.fancybox.close()" /></td>
