@@ -1,7 +1,7 @@
 <?php }
 error_reporting(E_ALL ^ E_NOTICE); 
 include_once("connect.php");
-$query = mysql_query("select course.courseimg,course.title,xuanke.progress from student,course,xuanke where student.studentId='$selectId' and course.courseId=selelct.courseId");
+$query = mysql_query("select course.courseimg,course.title,xuanke.progress from student,course,xuanke where student.studentId=xuanke.studentId' and course.courseId=selelct.courseId");
 ?>
 <?php    
     while($row = mysql_fetch_array($query)
