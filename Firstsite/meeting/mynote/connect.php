@@ -1,8 +1,8 @@
-<?php
-$host="localhost";
+﻿<?php
+$host="10.66.132.139:3306";
 $db_user="root";
-$db_pass="root";
-$db_name="meeting";
+$db_pass="qwer1234";
+$db_name="meet";
 $timezone="Asia/Shanghai";
 
 $link=mysql_connect($host,$db_user,$db_pass);
